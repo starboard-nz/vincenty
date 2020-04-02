@@ -1,10 +1,10 @@
-**vincenty**
+**vincenty Go module**
 
 Calculate the distance between 2 points on Earth's surface using Vincenty's formula.
 
 This is a Go re-implementation of the vincenty Python library.
 
-**usage**
+**Usage**
 
 ```
 package main
@@ -19,7 +19,7 @@ func main() {
         Alexandra := vincenty.LatLng{Latitude: -45.2426447, Longitude: 169.0977066 }
 
 	dist := vincenty.Inverse(Dunedin, Alexandra)
-	fmt.Printf("Distance: %vkm\n", dist.Kilometers())
+	fmt.Printf("Distance: %vkm\n", dist.Kilometres())
 }
 ```
 
