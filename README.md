@@ -1,10 +1,10 @@
-** vincenty
+**vincenty**
 
 Calculate the distance between 2 points on Earth's surface using Vincenty's formula.
 
 This is a Go re-implementation of the vincenty Python library.
 
-** usage
+**usage**
 
 ```
 package main
@@ -23,7 +23,7 @@ func main() {
 }
 ```
 
-References
+**References**
 
 * https://github.com/maurycyp/vincenty/
 * https://en.wikipedia.org/wiki/Vincenty's_formulae
