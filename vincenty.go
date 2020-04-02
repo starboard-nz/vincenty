@@ -67,10 +67,16 @@ func square(f float64) float64 {
 	return f * f
 }
 
-// Inverse calculates the distance between two points on the surface of a spheroid
-// using Vincenty's formula (inverse method)
+// Inverse calculates the distance between two points on the surface of a spheroid (WGS84) using Vincenty's formula (inverse method).
+// See https://en.wikipedia.org/wiki/Vincenty's_formulae#Inverse_problem
+// The points are given with their latitude-longitude pairs (LatLng)
+// The result is returned as the Distance.
+// Distance(-1.0) is returned if the iterative formula fails to converge (nearly antipodal points)
+// In that case the distance is probably not too far from 20037508m around the equator or 20003931m around the poles.
+// Depending on the precision you require for such long distances, you may want to use one of the above numbers or a different algorithm.
+// Works for points on opposite sides of the antimeridian.
 func Inverse(point1, point2 LatLng) Distance {
-	// WGS 84
+	// WGS84 values
 	a := 6378137.0  // meters
 	f := 1.0 / 298.257223563
 	b := 6356752.314245  // meters; b = (1 - f)a
