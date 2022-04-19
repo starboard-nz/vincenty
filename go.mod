@@ -1,4 +1,3 @@
-module gitlab.com/xerra/common/vincenty
+module github.com/starboard-nz/vincenty
 
-go 1.14
-
+go 1.17

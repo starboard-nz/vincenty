@@ -11,7 +11,7 @@ package main
 
 import (
         "fmt"
-        "gitlab.com/csst/common/vincenty"
+        "github.com/starboard-nz/vincenty"
 )
 
 func main() {
